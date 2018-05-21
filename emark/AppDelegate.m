@@ -39,9 +39,6 @@
 {
     self.window.backgroundColor = [EMTheme currentTheme].navBarBGColor;
     
-    
-    
-    
     [self initRoots];
     
     [self initNoti:launchOptions];

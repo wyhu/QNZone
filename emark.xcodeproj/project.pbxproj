@@ -150,7 +150,6 @@
 		6F46574120A17C5200241CB4 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F46572D20A17C5200241CB4 /* UIButton+WebCache.m */; };
 		6F46574520A1836C00241CB4 /* QNEveryDayPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F46574320A1836C00241CB4 /* QNEveryDayPicViewController.m */; };
 		6F46574620A1836C00241CB4 /* QNEveryDayPicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F46574420A1836C00241CB4 /* QNEveryDayPicViewController.xib */; };
-		6F4F5F1E20B2A5A2000DD8C3 /* QNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F5F1D20B2A5A2000DD8C3 /* QNViewController.swift */; };
 		6F64FAAF209C0963004BB97D /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F64FAAE209C0962004BB97D /* Default-568.png */; };
 		6F81503920AA9EEB00DB1C30 /* QNMoreToolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F81503820AA9EEB00DB1C30 /* QNMoreToolTableViewController.m */; };
 		6F81509D20AAA03500DB1C30 /* QNIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F81509B20AAA03500DB1C30 /* QNIdCardViewController.m */; };
@@ -551,7 +550,7 @@
 		6F46574320A1836C00241CB4 /* QNEveryDayPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNEveryDayPicViewController.m; sourceTree = "<group>"; };
 		6F46574420A1836C00241CB4 /* QNEveryDayPicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNEveryDayPicViewController.xib; sourceTree = "<group>"; };
 		6F4F5F1C20B2A5A1000DD8C3 /* emark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emark-Bridging-Header.h"; sourceTree = "<group>"; };
-		6F4F5F1D20B2A5A2000DD8C3 /* QNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNViewController.swift; sourceTree = "<group>"; };
+		6F4F5F2120B2B982000DD8C3 /* emark-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emark-Swift.h"; sourceTree = "<group>"; };
 		6F64FAAE209C0962004BB97D /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
 		6F81503720AA9EEB00DB1C30 /* QNMoreToolTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNMoreToolTableViewController.h; sourceTree = "<group>"; };
 		6F81503820AA9EEB00DB1C30 /* QNMoreToolTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNMoreToolTableViewController.m; sourceTree = "<group>"; };
@@ -1133,7 +1132,7 @@
 				4B5602F81ED9340F004025BB /* View */,
 				4B88FFE71ED92CD100135702 /* AppDelegate.h */,
 				4B88FFE81ED92CD100135702 /* AppDelegate.m */,
-				6F4F5F1D20B2A5A2000DD8C3 /* QNViewController.swift */,
+				6F4F5F2120B2B982000DD8C3 /* emark-Swift.h */,
 				4B88FFED1ED92CD100135702 /* Main.storyboard */,
 				4B88FFF21ED92CD100135702 /* LaunchScreen.storyboard */,
 				4B88FFF51ED92CD100135702 /* Info.plist */,
@@ -2241,7 +2240,6 @@
 				4B5B986F1EDEA94C00EA014D /* EMPublishBigDayViewController.m in Sources */,
 				6F4656E420A1502800241CB4 /* KJSearchBar.m in Sources */,
 				6F81510020AAA85500DB1C30 /* UIImage+HXExtension.m in Sources */,
-				6F4F5F1E20B2A5A2000DD8C3 /* QNViewController.swift in Sources */,
 				6F4656EE20A1667F00241CB4 /* MMScanViewController.m in Sources */,
 				6F4656E720A153C200241CB4 /* QNSearchExpressCompanyTableViewController.m in Sources */,
 				6F8F407E209E06A00033ED82 /* QNExpressTableViewController.m in Sources */,
@@ -2477,6 +2475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79G8SGGX82;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = emark/EMPrefixHeader.pch;
@@ -2499,6 +2498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79G8SGGX82;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = emark/EMPrefixHeader.pch;
@@ -2516,7 +2516,6 @@
 		4B8800121ED92CD100135702 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RG7HF2MUY9;
 				INFOPLIST_FILE = emarkTests/Info.plist;
@@ -2530,7 +2529,6 @@
 		4B8800131ED92CD100135702 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RG7HF2MUY9;
 				INFOPLIST_FILE = emarkTests/Info.plist;
@@ -2544,7 +2542,6 @@
 		4B8800151ED92CD100135702 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RG7HF2MUY9;
 				INFOPLIST_FILE = emarkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2557,7 +2554,6 @@
 		4B8800161ED92CD100135702 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RG7HF2MUY9;
 				INFOPLIST_FILE = emarkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

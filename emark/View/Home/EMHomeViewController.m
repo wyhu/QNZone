@@ -23,9 +23,6 @@
 #import "QNEveryDayPicViewController.h"
 #import "EMHelpViewController.h"
 #import "MJRefresh.h"
-//#import "emark-Bridging-Header.h"
-
-
 
 
 @interface EMHomeViewController ()
@@ -52,8 +49,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 {
     [super viewDidLoad];
     
-    
-    
+
     
     [self.view addSubview:self.collectionView];
     [self checkToClearNoti];
