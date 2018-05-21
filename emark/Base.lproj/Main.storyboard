@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kpC-13-Fn3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="irU-ku-JTB">
+            <objects>
+                <navigationController id="kpC-13-Fn3" customClass="EMBaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GLc-gM-zMZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UyR-6U-Zkg" kind="relationship" relationship="rootViewController" id="uNf-FJ-Vk3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8z-fZ-P30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1076" y="484"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="xvQ-kl-wj1">
+            <objects>
+                <viewController id="UyR-6U-Zkg" customClass="EMSplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6t0-OJ-dAh"/>
+                        <viewControllerLayoutGuide type="bottom" id="bob-EM-0Ig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xgF-vx-l3r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lUv-of-kuv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtm-0v-8H0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="484"/>
+        </scene>
+        <!--生成二维码-->
+        <scene sceneID="cTP-5I-MRa">
+            <objects>
+                <viewController storyboardIdentifier="drawQr" title="生成二维码" id="SKY-JB-az2" customClass="TestDrawQrViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aua-ja-oku"/>
+                        <viewControllerLayoutGuide type="bottom" id="NEn-PU-6CR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="drawQr" id="aRy-CM-vv8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-93-pK2">
+                                <rect key="frame" x="62" y="140" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ONU-93-pK2" secondAttribute="height" multiplier="1:1" id="Cm7-z6-YZV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NND-Qg-41V" appends="YES" id="nRJ-x8-XBt"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-zL-qGa">
+                                <rect key="frame" x="127" y="470" width="120" height="49"/>
+                                <color key="backgroundColor" red="1" green="0.10759859770000001" blue="0.4354100695" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="8YE-a2-jBD"/>
+                                    <constraint firstAttribute="height" constant="49" id="zkX-37-wEi"/>
+                                </constraints>
+                                <state key="normal" title="生成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createQrBtnClicked:" destination="SKY-JB-az2" eventType="touchUpInside" id="e5e-OT-9Iw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.baidu.com" borderStyle="roundedRect" placeholder="请输入" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-TZ-Um3">
+                                <rect key="frame" x="62" y="77" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="LW9-Vn-ztl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击图片保存到相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyF-Nv-ebL">
+                                <rect key="frame" x="123" y="398" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4Pu-lC-clm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.38980744979999998" green="0.44330407659999999" blue="0.50879402480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bfG-TZ-Um3" firstAttribute="centerX" secondItem="aRy-CM-vv8" secondAttribute="centerX" id="4WK-GW-xqO"/>
+                            <constraint firstAttribute="trailing" secondItem="ONU-93-pK2" secondAttribute="trailing" constant="63" id="D1I-eM-hAH"/>
+                            <constraint firstItem="g8X-zL-qGa" firstAttribute="top" secondItem="ONU-93-pK2" secondAttribute="bottom" constant="80" id="NUM-MA-2TN"/>
+                            <constraint firstItem="g8X-zL-qGa" firstAttribute="centerX" secondItem="aRy-CM-vv8" secondAttribute="centerX" id="Nz2-Qc-IOk"/>
+                            <constraint firstItem="bfG-TZ-Um3" firstAttribute="top" secondItem="aua-ja-oku" secondAttribute="bottom" constant="57" id="QZT-wU-cZo"/>
+                            <constraint firstItem="ONU-93-pK2" firstAttribute="leading" secondItem="aRy-CM-vv8" secondAttribute="leading" constant="62" id="U2l-Rh-R9W"/>
+                            <constraint firstItem="WyF-Nv-ebL" firstAttribute="centerX" secondItem="aRy-CM-vv8" secondAttribute="centerX" id="Wp2-5U-Lyu"/>
+                            <constraint firstItem="ONU-93-pK2" firstAttribute="top" secondItem="aua-ja-oku" secondAttribute="bottom" constant="120" id="gqc-Fh-PXa"/>
+                            <constraint firstItem="WyF-Nv-ebL" firstAttribute="top" secondItem="ONU-93-pK2" secondAttribute="bottom" constant="8" id="hFQ-el-wCG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="linkTfd" destination="bfG-TZ-Um3" id="g2k-6V-1p7"/>
+                        <outlet property="qrImageView" destination="ONU-93-pK2" id="qab-sU-oia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpc-W5-XLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NND-Qg-41V">
+                    <connections>
+                        <action selector="tapImage:" destination="SKY-JB-az2" id="Gdj-tJ-I9K"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1520.8" y="789.35532233883066"/>
+        </scene>
+        <!--生成条形码-->
+        <scene sceneID="RJj-p0-JGw">
+            <objects>
+                <viewController storyboardIdentifier="drawBar" title="生成条形码" id="4bo-9x-yyB" customClass="TestDrawBarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C0v-l5-mbm"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnt-kp-03J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q53-1c-7c9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="27e-EY-UCt">
+                                <rect key="frame" x="63" y="180" width="250" height="150"/>
+                                <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="27e-EY-UCt" secondAttribute="height" multiplier="5:3" id="dCE-9T-qol"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vf6-V3-O7w" appends="YES" id="xJa-7a-XvU"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yw-P2-kOH">
+                                <rect key="frame" x="127" y="512" width="120" height="49"/>
+                                <color key="backgroundColor" red="1" green="0.10759859770000001" blue="0.4354100695" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Lob-LK-M41"/>
+                                    <constraint firstAttribute="height" constant="49" id="YtN-aw-XrF"/>
+                                </constraints>
+                                <state key="normal" title="生成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBarBtnClicked:" destination="4bo-9x-yyB" eventType="touchUpInside" id="Ldy-HE-cGK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" borderStyle="roundedRect" placeholder="请输入" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QjR-y5-8XN">
+                                <rect key="frame" x="62" y="77" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Kox-UW-whf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击图片保存到相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-hL-M9J">
+                                <rect key="frame" x="123.5" y="338" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yq8-8I-oHi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.38980744979999998" green="0.44330407659999999" blue="0.50879402480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QjR-y5-8XN" firstAttribute="top" secondItem="C0v-l5-mbm" secondAttribute="bottom" constant="57" id="7VQ-xg-6GO"/>
+                            <constraint firstItem="QjR-y5-8XN" firstAttribute="centerX" secondItem="Q53-1c-7c9" secondAttribute="centerX" id="N7b-hP-RYH"/>
+                            <constraint firstItem="4Yw-P2-kOH" firstAttribute="centerX" secondItem="Q53-1c-7c9" secondAttribute="centerX" id="PQt-73-W1w"/>
+                            <constraint firstItem="6ux-hL-M9J" firstAttribute="top" secondItem="27e-EY-UCt" secondAttribute="bottom" constant="8" id="XDg-cS-vjT"/>
+                            <constraint firstItem="4Yw-P2-kOH" firstAttribute="top" secondItem="27e-EY-UCt" secondAttribute="bottom" constant="182" id="dtb-P8-pMI"/>
+                            <constraint firstAttribute="trailing" secondItem="27e-EY-UCt" secondAttribute="trailing" constant="62" id="gnC-bh-svT"/>
+                            <constraint firstItem="6ux-hL-M9J" firstAttribute="centerX" secondItem="Q53-1c-7c9" secondAttribute="centerX" id="o0N-1E-qYh"/>
+                            <constraint firstItem="27e-EY-UCt" firstAttribute="leading" secondItem="Q53-1c-7c9" secondAttribute="leading" constant="63" id="rH6-z3-UUt"/>
+                            <constraint firstItem="27e-EY-UCt" firstAttribute="top" secondItem="C0v-l5-mbm" secondAttribute="bottom" constant="160" id="y8d-Rs-1xu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barImageView" destination="27e-EY-UCt" id="HBF-lE-DHB"/>
+                        <outlet property="linkTfd" destination="QjR-y5-8XN" id="iKu-s8-bOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwr-As-qYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vf6-V3-O7w">
+                    <connections>
+                        <action selector="tapImage:" destination="4bo-9x-yyB" id="IH4-ua-UgZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2224.8000000000002" y="788.45577211394311"/>
+        </scene>
+    </scenes>
+</document>

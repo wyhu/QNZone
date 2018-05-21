@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QNEveryDayPicViewController">
+            <connections>
+                <outlet property="bottomView" destination="swc-45-p08" id="QHs-53-m3k"/>
+                <outlet property="imageView" destination="lpZ-ry-Wh4" id="c8Q-4N-qvu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lpZ-ry-Wh4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swc-45-p08">
+                    <rect key="frame" x="0.0" y="489" width="375" height="178"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH4-Px-5gf">
+                            <rect key="frame" x="172" y="100" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="UYU-ei-bGH"/>
+                                <constraint firstAttribute="width" constant="32" id="z0M-GV-kk3"/>
+                            </constraints>
+                            <state key="normal" image="下载"/>
+                            <connections>
+                                <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="SHM-0G-due"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7S-WJ-7oq">
+                            <rect key="frame" x="53" y="100" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="hLY-c7-fks"/>
+                                <constraint firstAttribute="width" constant="32" id="tTd-aD-8XS"/>
+                            </constraints>
+                            <state key="normal" image="返回"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="61l-vg-n6a"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-zP-nWQ">
+                            <rect key="frame" x="290" y="100" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="H4v-Et-xsa"/>
+                                <constraint firstAttribute="width" constant="32" id="fZ5-d6-jGw"/>
+                            </constraints>
+                            <state key="normal" image="替换"/>
+                            <connections>
+                                <action selector="exchangeAction:" destination="-1" eventType="touchUpInside" id="2nU-EM-ZA0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="R7S-WJ-7oq" secondAttribute="bottom" constant="46" id="7Wo-94-LdM"/>
+                        <constraint firstItem="R7S-WJ-7oq" firstAttribute="leading" secondItem="swc-45-p08" secondAttribute="leading" constant="53" id="ExF-Z7-EQP"/>
+                        <constraint firstAttribute="bottom" secondItem="hS1-zP-nWQ" secondAttribute="bottom" constant="46" id="IRG-sB-LDC"/>
+                        <constraint firstAttribute="trailing" secondItem="hS1-zP-nWQ" secondAttribute="trailing" constant="53" id="VjD-EQ-Nrx"/>
+                        <constraint firstItem="rH4-Px-5gf" firstAttribute="centerX" secondItem="swc-45-p08" secondAttribute="centerX" id="W7t-JC-glI"/>
+                        <constraint firstAttribute="bottom" secondItem="rH4-Px-5gf" secondAttribute="bottom" constant="46" id="ZU2-ka-TrA"/>
+                        <constraint firstAttribute="height" constant="178" id="alm-Xd-tIh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="swc-45-p08" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="AFz-2U-9fQ"/>
+                <constraint firstItem="lpZ-ry-Wh4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="SgK-i5-T3N"/>
+                <constraint firstItem="lpZ-ry-Wh4" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Utv-2u-qqU"/>
+                <constraint firstItem="lpZ-ry-Wh4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WgX-VL-d6V"/>
+                <constraint firstItem="swc-45-p08" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="b1f-dg-JxF"/>
+                <constraint firstItem="lpZ-ry-Wh4" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="oge-z2-u7H"/>
+                <constraint firstItem="swc-45-p08" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="smp-cl-JW7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="120.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="下载" width="64" height="64"/>
+        <image name="替换" width="64" height="64"/>
+        <image name="返回" width="64" height="64"/>
+    </resources>
+</document>

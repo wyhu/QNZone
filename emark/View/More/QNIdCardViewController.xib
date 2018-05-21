@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QNIdCardViewController">
+            <connections>
+                <outlet property="AfterButton" destination="7iB-3c-Paq" id="VDw-Z5-ZSc"/>
+                <outlet property="FrontButton" destination="eD4-Hd-Hja" id="CXg-iD-sG2"/>
+                <outlet property="okButton" destination="dRQ-U3-UJG" id="A8g-FA-v8o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD4-Hd-Hja">
+                    <rect key="frame" x="15" y="35" width="345" height="215"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eD4-Hd-Hja" secondAttribute="height" multiplier="69:43" id="Wwi-AZ-i5l"/>
+                    </constraints>
+                    <state key="normal" title="    身份证正面" image="身份证正面">
+                        <color key="titleColor" red="0.1333333333" green="0.76078431369999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="frontAction:" destination="-1" eventType="touchUpInside" id="A9d-Gd-0Pl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iB-3c-Paq">
+                    <rect key="frame" x="15" y="272" width="345" height="215"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7iB-3c-Paq" secondAttribute="height" multiplier="69:43" id="5eY-7r-Zuz"/>
+                    </constraints>
+                    <state key="normal" title="    身份证反面" image="身份证反面">
+                        <color key="titleColor" red="0.1333333333" green="0.76078431369999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="afterAction:" destination="-1" eventType="touchUpInside" id="LXE-oU-QIJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-U3-UJG">
+                    <rect key="frame" x="165" y="527" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="363-xR-6vz"/>
+                        <constraint firstAttribute="height" constant="45" id="Iwd-K8-ezX"/>
+                    </constraints>
+                    <state key="normal" image="完成"/>
+                    <connections>
+                        <action selector="pinJieAction:" destination="-1" eventType="touchUpInside" id="S3H-NI-qr3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一键拼接" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3I-DL-OOt">
+                    <rect key="frame" x="158" y="580" width="58" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.76078431372549016" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="7iB-3c-Paq" secondAttribute="trailing" constant="15" id="3NF-i8-NDz"/>
+                <constraint firstItem="n3I-DL-OOt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9iq-bh-HFL"/>
+                <constraint firstItem="dRQ-U3-UJG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LLl-Ck-x5j"/>
+                <constraint firstItem="eD4-Hd-Hja" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="SzD-U4-uvc"/>
+                <constraint firstItem="dRQ-U3-UJG" firstAttribute="top" secondItem="7iB-3c-Paq" secondAttribute="bottom" constant="40" id="XxE-Ed-4ui"/>
+                <constraint firstItem="n3I-DL-OOt" firstAttribute="top" secondItem="dRQ-U3-UJG" secondAttribute="bottom" constant="8" id="ZNp-by-qPk"/>
+                <constraint firstItem="7iB-3c-Paq" firstAttribute="top" secondItem="eD4-Hd-Hja" secondAttribute="bottom" constant="22" id="i54-bq-QjV"/>
+                <constraint firstItem="eD4-Hd-Hja" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="lZb-BK-JmQ"/>
+                <constraint firstItem="7iB-3c-Paq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="wDR-cM-wIy"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="eD4-Hd-Hja" secondAttribute="trailing" constant="15" id="xql-qh-frV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-55" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="完成" width="64" height="64"/>
+        <image name="身份证反面" width="128" height="128"/>
+        <image name="身份证正面" width="128" height="128"/>
+    </resources>
+</document>

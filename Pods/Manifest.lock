@@ -1,0 +1,85 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CZPicker (0.4.3)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - KYGooeyMenu (1.0.5)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - MMNumberKeyboard (0.1.6)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
+  - UMCAnalytics (5.4.1):
+    - UMCCommon
+  - UMCCommon (1.4.3)
+  - UMCShare/Core (6.8.2):
+    - UMCCommon
+  - UMCShare/Social/AlipayShare (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedQQ (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
+  - YYCache (1.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - CZPicker
+  - FMDB (~> 2.6.2)
+  - KYGooeyMenu
+  - Masonry (~> 1.0.1)
+  - MJRefresh
+  - MMNumberKeyboard
+  - PNChart
+  - UMCAnalytics
+  - UMCCommon
+  - UMCShare/Social/AlipayShare
+  - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedSina
+  - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI
+  - YYCache (= 1.0.3)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CZPicker: 55aa1751ea26e209814552da1a9a08cba8bbf72a
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  KYGooeyMenu: 3d9f3504b59a5dd1b6c4ff34a06836284647a2aa
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MMNumberKeyboard: 4bac4f0402ef73c92bb6594d9c7469a9add63589
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  UMCAnalytics: 44e0bb2f442b7aaf97d1c924b58798b612f2c13d
+  UMCCommon: ac0bc01a46a5640bbd58646448f455b4c5404bf0
+  UMCShare: ab74e3c818cd305846609b15b0daf36872213c28
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+
+PODFILE CHECKSUM: 4b190e6c4c90f741cd654e89153c41f7e8d2fe1f
+
+COCOAPODS: 1.4.0
