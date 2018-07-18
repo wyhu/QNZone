@@ -242,6 +242,8 @@
 		6FF0EA9320975F0B0007EB25 /* EMHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0EA9220975F0B0007EB25 /* EMHelpViewController.m */; };
 		6FF0EA97209765A20007EB25 /* EMPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0EA96209765A20007EB25 /* EMPasswordViewController.m */; };
 		A01F357969B5FC54CF9C80F3 /* libPods-emark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF721D93688FB377D9630C56 /* libPods-emark.a */; };
+		C8CD4E8E20FF9B8C00668C35 /* QNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD4E8D20FF9B8C00668C35 /* QNBaseViewController.m */; };
+		C8CD4E9120FF9BCA00668C35 /* QNActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD4E9020FF9BCA00668C35 /* QNActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -735,6 +737,10 @@
 		6FF0EA96209765A20007EB25 /* EMPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMPasswordViewController.m; sourceTree = "<group>"; };
 		75C5AA08449CC3411A02CD69 /* Pods-emark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emark/Pods-emark.debug.xcconfig"; sourceTree = "<group>"; };
 		AF721D93688FB377D9630C56 /* libPods-emark.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emark.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8CD4E8C20FF9B8C00668C35 /* QNBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNBaseViewController.h; sourceTree = "<group>"; };
+		C8CD4E8D20FF9B8C00668C35 /* QNBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNBaseViewController.m; sourceTree = "<group>"; };
+		C8CD4E8F20FF9BCA00668C35 /* QNActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNActivityViewController.h; sourceTree = "<group>"; };
+		C8CD4E9020FF9BCA00668C35 /* QNActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1130,6 +1136,7 @@
 				4BBD996C1ED95238002AA8FB /* Util */,
 				4B5602F71ED9340F004025BB /* Model */,
 				4B5602F81ED9340F004025BB /* View */,
+				C8CD4E8820FF9AD500668C35 /* Classes */,
 				4B88FFE71ED92CD100135702 /* AppDelegate.h */,
 				4B88FFE81ED92CD100135702 /* AppDelegate.m */,
 				6F4F5F2120B2B982000DD8C3 /* emark-Swift.h */,
@@ -1842,6 +1849,8 @@
 			children = (
 				6FD0F6E820A0141400DFA2F1 /* QNRootNavigationController.h */,
 				6FD0F6E920A0141400DFA2F1 /* QNRootNavigationController.m */,
+				C8CD4E8C20FF9B8C00668C35 /* QNBaseViewController.h */,
+				C8CD4E8D20FF9B8C00668C35 /* QNBaseViewController.m */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -1870,6 +1879,39 @@
 				AF721D93688FB377D9630C56 /* libPods-emark.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8CD4E8820FF9AD500668C35 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C8CD4E8920FF9B0600668C35 /* 活动 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C8CD4E8920FF9B0600668C35 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				C8CD4E8A20FF9B1200668C35 /* Controller */,
+				C8CD4E8B20FF9B1F00668C35 /* View */,
+			);
+			path = "活动";
+			sourceTree = "<group>";
+		};
+		C8CD4E8A20FF9B1200668C35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C8CD4E8F20FF9BCA00668C35 /* QNActivityViewController.h */,
+				C8CD4E9020FF9BCA00668C35 /* QNActivityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C8CD4E8B20FF9B1F00668C35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2126,6 +2168,7 @@
 				6F8C82E820AEA55000762F0B /* HexColors.m in Sources */,
 				4BBD99891ED97AAD002AA8FB /* EMBaseHandler.m in Sources */,
 				4B5B987B1EDEAD9100EA014D /* EMBigDayItemInfo.m in Sources */,
+				C8CD4E9120FF9BCA00668C35 /* QNActivityViewController.m in Sources */,
 				4BA30BDA1EDBCABF006376B0 /* EMAboutUsViewController.m in Sources */,
 				6F46573A20A17C5200241CB4 /* SDWebImageDownloaderOperation.m in Sources */,
 				6F46573920A17C5200241CB4 /* SDImageCache.m in Sources */,
@@ -2171,6 +2214,7 @@
 				4B56ACDE1EE1235F00C1AFAB /* EMTextField.m in Sources */,
 				6FD0F662209F001600DFA2F1 /* QNExpressCompanyTableViewController.m in Sources */,
 				6F8150F920AAA85500DB1C30 /* HXPhotoTools.m in Sources */,
+				C8CD4E8E20FF9B8C00668C35 /* QNBaseViewController.m in Sources */,
 				6F46573020A17C5200241CB4 /* MKAnnotationView+WebCache.m in Sources */,
 				4B6237F91EE2578C00E723E3 /* EMPublishAlertViewController.m in Sources */,
 				4B6238041EE26D7200E723E3 /* EMAlertItemInfo.m in Sources */,

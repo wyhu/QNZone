@@ -51,9 +51,9 @@
 
 - (void)initRoots{
     //导航栏和标签栏使用第三方库，两者的全局配置都在这里完成
-    NSMutableArray *titleArr = [NSMutableArray arrayWithObjects:@"工具箱",@"查快递",@"设置", nil];
-    NSMutableArray *imageSelectedArr = [NSMutableArray arrayWithObjects:@"工具箱黑",@"快递黑",@"设置黑", nil];
-    NSMutableArray *imageNormalArr = [NSMutableArray arrayWithObjects:@"工具箱白",@"快递白",@"设置白", nil];
+    NSMutableArray *titleArr = [NSMutableArray arrayWithObjects:@"工具箱",@"查快递",@"活动",@"设置", nil];
+    NSMutableArray *imageSelectedArr = [NSMutableArray arrayWithObjects:@"工具箱",@"快递",@"活动",@"设置", nil];
+    NSMutableArray *imageNormalArr = [NSMutableArray arrayWithObjects:@"工具箱灰",@"快递灰",@"活动灰",@"设置灰", nil];
     
     NSMutableArray *controllersArr = [NSMutableArray array];
     
@@ -65,6 +65,10 @@
     QNRootNavigationController * expressNav = [[QNRootNavigationController alloc] initWithRootViewController:expressVC];
     [controllersArr addObject:expressNav];
     
+    UIViewController *actiVC = [[UIViewController alloc] init];
+    QNRootNavigationController * actiNav = [[QNRootNavigationController alloc] initWithRootViewController:actiVC];
+    [controllersArr addObject:actiNav];
+    
     EMSettingViewController *settingVC = [[EMSettingViewController alloc] init];
     QNRootNavigationController * settingNav = [[QNRootNavigationController alloc] initWithRootViewController:settingVC];
     [controllersArr addObject:settingNav];
@@ -72,14 +76,16 @@
     
     //配置标签栏
     JMConfig *config = [JMConfig config];
-    config.tabBarBackground = [EMTheme currentTheme].navBarBGColor;
+    config.tabBarBackground = [EMTheme currentTheme].navTitleColor;
     config.tabBarAnimType = JMConfigTabBarAnimTypeRotationY;
     config.typeLayout = JMConfigTypeLayoutNormal;//只有图片
-    config.imageSize = CGSizeMake(28, 28);
-    config.norTitleColor = [EMTheme currentTheme].navTitleColor;
-    config.selTitleColor = [UIColor blackColor];
-    config.imageOffset = 5;
-    config.titleFont = 9;
+    config.imageSize = CGSizeMake(26, 26);
+    config.norTitleColor = [UIColor colorWithHexString:@"#707070"];
+    config.selTitleColor = [EMTheme currentTheme].navBarBGColor;
+    config.imageOffset = 2;
+    config.titleFont = 12;
+    config.isClearTabBarTopLine = NO;
+//    config.tabBarTopLineColor = [UIColor colorWithHexString:@"#707070"];
     //标签栏
     JMTabBarController *tabBarVc = [[JMTabBarController alloc] initWithTabBarControllers:controllersArr NorImageArr:imageNormalArr SelImageArr:imageSelectedArr TitleArr:titleArr Config:config];
     

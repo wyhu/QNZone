@@ -23,19 +23,17 @@
 //    将返回按钮的文字position设置不在屏幕上显示
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000 * 4, 0)
                                                          forBarMetrics:UIBarMetricsDefault];
-    //导航栏左右item字体颜色
-    [self.navigationBar setTintColor:[EMTheme currentTheme].navTitleColor];
-    
-    UIColor *color = [EMTheme currentTheme].navTitleColor;
-    //中间标题
-    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:color};
-    
-    //导航栏背景
-    self.navigationBar.translucent = NO;
-//    self.navigationBar.backgroundColor = [UIColor redColor];
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBg"] forBarPosition:UIBarPositionTop barMetrics:0];
+
     //去掉下划线
     [self.navigationBar setShadowImage:[UIImage new]];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    bar.translucent = YES;
+    //背景色
+    bar.barTintColor = [EMTheme currentTheme].navBarBGColor;
+    //字体色
+    bar.titleTextAttributes = @{NSForegroundColorAttributeName:[EMTheme currentTheme].navTitleColor};
+    bar.tintColor = [EMTheme currentTheme].navTitleColor;
 
 }
 
@@ -63,14 +61,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
