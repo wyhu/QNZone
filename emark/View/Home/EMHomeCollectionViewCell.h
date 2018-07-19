@@ -10,6 +10,7 @@
 
 @interface EMHomeCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *menuLabel;
+@property (nonatomic, strong) UIImageView *imgView;
 
 
 @end

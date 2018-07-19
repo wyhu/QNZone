@@ -214,7 +214,8 @@ static NSString *settingTableViewHeaderViewIdentifier = @"settingTableViewHeader
     }else if ([title isEqualToString:@"帮助"]){
         
       EMHelpViewController  *vc = [[EMHelpViewController alloc] init];
-
+        vc.title = @"帮助";
+        vc.urlStr = @"http://a2.rabbitpre.com/m/NFRVVna";
         [self.navigationController pushViewController:vc animated:YES];
 
     }else{

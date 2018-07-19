@@ -10,4 +10,6 @@
 
 @interface EMHelpViewController : UIViewController
 
+@property(nonatomic, copy) NSString *urlStr;
+
 @end

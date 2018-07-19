@@ -24,16 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedString(@"帮助", nil);
     self.view.backgroundColor = [EMTheme currentTheme].mainBGColor;
-
     [self.view addSubview:self.wkWebView];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://a2.rabbitpre.com/m/NFRVVna"]];
-    [self.wkWebView loadRequest:request];
-
     [self.view showMaskLoadingTips:nil style:kLogoLoopGray];
 }
 
+- (void)setUrlStr:(NSString *)urlStr
+{
+    _urlStr = urlStr;
+    
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr]];
+    [self.wkWebView loadRequest:request];
+
+}
 - (WKWebView *)wkWebView
 {
     if (!_wkWebView) {
