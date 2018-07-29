@@ -154,7 +154,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 - (NSArray *)menuArr
 {
     if (!_menuArr) {
-        _menuArr = @[NSLocalizedString(@"日记", nil), NSLocalizedString(@"账单", nil), NSLocalizedString(@"节日", nil), NSLocalizedString(@"收纳", nil), NSLocalizedString(@"提醒", nil),NSLocalizedString(@"密码本", nil),NSLocalizedString(@"二维码", nil),NSLocalizedString(@"身份证拼接", nil),@"帮助",@"更多"];
+        _menuArr = @[NSLocalizedString(@"日记", nil), NSLocalizedString(@"账单", nil), NSLocalizedString(@"节日", nil), NSLocalizedString(@"收纳", nil), NSLocalizedString(@"提醒", nil),NSLocalizedString(@"密码本", nil),NSLocalizedString(@"二维码", nil),NSLocalizedString(@"身份证拼接", nil),@"更多"];
         
     }
     
@@ -194,14 +194,8 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
         //身份证拼接
         vc = [[QNIdCardViewController alloc] init];
     }else if (indexPath.row == 8){
-        
-        
-    }else{
-        //更多
         vc = [[QNMoreToolTableViewController alloc] init];
-        
     }
-    
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -296,7 +290,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 //头部视图
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(SCREEN_WIDTH, 150);
+    return CGSizeMake(SCREEN_WIDTH, 10);
 }
 
 
@@ -306,7 +300,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
     UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                               withReuseIdentifier:homeCollectionResuableViewIdentifier
                                                                                      forIndexPath:indexPath];
-    headerView.backgroundColor = [UIColor redColor];
+    headerView.backgroundColor = [UIColor whiteColor];
     
     return headerView;
 }

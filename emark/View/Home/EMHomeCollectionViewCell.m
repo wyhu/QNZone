@@ -42,7 +42,7 @@
     if (!_menuLabel) {
         _menuLabel = [[UILabel alloc] init];
         _menuLabel.textAlignment = NSTextAlignmentCenter;
-        _menuLabel.textColor = [UIColor whiteColor];
+        _menuLabel.textColor = [EMTheme currentTheme].navBarBGColor;
         _menuLabel.font = [UIFont boldSystemFontOfSize:22.0];
     }
     

@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="工具来啦.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRk-rD-Tht">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景8" translatesAutoresizingMaskIntoConstraints="NO" id="dRk-rD-Tht">
                         <rect key="frame" x="10" y="5" width="330" height="150"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-8a-cqk">
@@ -49,6 +49,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="工具来啦.png" width="638" height="388"/>
+        <image name="背景8" width="16" height="16"/>
     </resources>
 </document>

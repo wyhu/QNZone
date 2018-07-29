@@ -122,7 +122,7 @@
 		4BED19721EE52458008DCF41 /* EMBillItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED19701EE52458008DCF41 /* EMBillItemInfo.m */; };
 		6F34F583210051C800BEA167 /* QNActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */; };
 		6F34F584210051C800BEA167 /* QNActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */; };
-		6F34F587210060A500BEA167 /* 工具来啦.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F586210060A500BEA167 /* 工具来啦.png */; };
+		6F34F587210060A500BEA167 /* 背景8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F586210060A500BEA167 /* 背景8.png */; };
 		6F4656E120A14FCF00241CB4 /* express0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F4656E020A14FCF00241CB4 /* express0.plist */; };
 		6F4656E420A1502800241CB4 /* KJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4656E320A1502800241CB4 /* KJSearchBar.m */; };
 		6F4656E720A153C200241CB4 /* QNSearchExpressCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4656E620A153C200241CB4 /* QNSearchExpressCompanyTableViewController.m */; };
@@ -499,7 +499,7 @@
 		6F34F580210051C800BEA167 /* QNActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNActivityTableViewCell.h; sourceTree = "<group>"; };
 		6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNActivityTableViewCell.m; sourceTree = "<group>"; };
 		6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNActivityTableViewCell.xib; sourceTree = "<group>"; };
-		6F34F586210060A500BEA167 /* 工具来啦.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "工具来啦.png"; sourceTree = "<group>"; };
+		6F34F586210060A500BEA167 /* 背景8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景8.png"; sourceTree = "<group>"; };
 		6F4656E020A14FCF00241CB4 /* express0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = express0.plist; sourceTree = "<group>"; };
 		6F4656E220A1502700241CB4 /* KJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJSearchBar.h; sourceTree = "<group>"; };
 		6F4656E320A1502800241CB4 /* KJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJSearchBar.m; sourceTree = "<group>"; };
@@ -1450,7 +1450,7 @@
 		6F34F5852100608D00BEA167 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				6F34F586210060A500BEA167 /* 工具来啦.png */,
+				6F34F586210060A500BEA167 /* 背景8.png */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2062,7 +2062,7 @@
 				6F34F584210051C800BEA167 /* QNActivityTableViewCell.xib in Resources */,
 				4B2B35B11F78DAF700425B0C /* Localizable.strings in Resources */,
 				4B112D431EE90F19000EDB83 /* Assets.xcassets in Resources */,
-				6F34F587210060A500BEA167 /* 工具来啦.png in Resources */,
+				6F34F587210060A500BEA167 /* 背景8.png in Resources */,
 				6F4656E120A14FCF00241CB4 /* express0.plist in Resources */,
 				6F46574620A1836C00241CB4 /* QNEveryDayPicViewController.xib in Resources */,
 				6F4656F020A1667F00241CB4 /* resource.bundle in Resources */,

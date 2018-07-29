@@ -84,7 +84,7 @@
     config.selTitleColor = [EMTheme currentTheme].navBarBGColor;
     config.imageOffset = 2;
     config.titleFont = 12;
-    config.isClearTabBarTopLine = NO;
+    config.isClearTabBarTopLine = YES;
 //    config.tabBarTopLineColor = [UIColor colorWithHexString:@"#707070"];
     //标签栏
     JMTabBarController *tabBarVc = [[JMTabBarController alloc] initWithTabBarControllers:controllersArr NorImageArr:imageNormalArr SelImageArr:imageSelectedArr TitleArr:titleArr Config:config];
