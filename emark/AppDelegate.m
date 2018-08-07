@@ -55,6 +55,7 @@
     NSMutableArray *imageSelectedArr = [NSMutableArray arrayWithObjects:@"工具箱",@"快递",@"活动",@"设置", nil];
     NSMutableArray *imageNormalArr = [NSMutableArray arrayWithObjects:@"工具箱灰",@"快递灰",@"活动灰",@"设置灰", nil];
     
+    
     NSMutableArray *controllersArr = [NSMutableArray array];
     
     EMHomeViewController *homeVC = [[EMHomeViewController alloc] init];
