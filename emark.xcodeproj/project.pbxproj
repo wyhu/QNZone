@@ -120,6 +120,9 @@
 		4BED19671EE5237F008DCF41 /* EMPublishBillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED19651EE5237F008DCF41 /* EMPublishBillTableViewCell.m */; };
 		4BED19711EE52458008DCF41 /* EMBillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED196E1EE52458008DCF41 /* EMBillInfo.m */; };
 		4BED19721EE52458008DCF41 /* EMBillItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED19701EE52458008DCF41 /* EMBillItemInfo.m */; };
+		6F34F583210051C800BEA167 /* QNActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */; };
+		6F34F584210051C800BEA167 /* QNActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */; };
+		6F34F587210060A500BEA167 /* 背景8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F586210060A500BEA167 /* 背景8.png */; };
 		6F4656E120A14FCF00241CB4 /* express0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F4656E020A14FCF00241CB4 /* express0.plist */; };
 		6F4656E420A1502800241CB4 /* KJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4656E320A1502800241CB4 /* KJSearchBar.m */; };
 		6F4656E720A153C200241CB4 /* QNSearchExpressCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4656E620A153C200241CB4 /* QNSearchExpressCompanyTableViewController.m */; };
@@ -493,6 +496,10 @@
 		4BED196E1EE52458008DCF41 /* EMBillInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBillInfo.m; sourceTree = "<group>"; };
 		4BED196F1EE52458008DCF41 /* EMBillItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBillItemInfo.h; sourceTree = "<group>"; };
 		4BED19701EE52458008DCF41 /* EMBillItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBillItemInfo.m; sourceTree = "<group>"; };
+		6F34F580210051C800BEA167 /* QNActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNActivityTableViewCell.h; sourceTree = "<group>"; };
+		6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNActivityTableViewCell.m; sourceTree = "<group>"; };
+		6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNActivityTableViewCell.xib; sourceTree = "<group>"; };
+		6F34F586210060A500BEA167 /* 背景8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景8.png"; sourceTree = "<group>"; };
 		6F4656E020A14FCF00241CB4 /* express0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = express0.plist; sourceTree = "<group>"; };
 		6F4656E220A1502700241CB4 /* KJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJSearchBar.h; sourceTree = "<group>"; };
 		6F4656E320A1502800241CB4 /* KJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJSearchBar.m; sourceTree = "<group>"; };
@@ -1430,6 +1437,24 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		6F34F57F210036F300BEA167 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F34F580210051C800BEA167 /* QNActivityTableViewCell.h */,
+				6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */,
+				6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6F34F5852100608D00BEA167 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6F34F586210060A500BEA167 /* 背景8.png */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		6F4656E820A1667F00241CB4 /* MMScanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -1892,8 +1917,9 @@
 		C8CD4E8920FF9B0600668C35 /* 活动 */ = {
 			isa = PBXGroup;
 			children = (
+				6F34F5852100608D00BEA167 /* Other */,
+				6F34F57F210036F300BEA167 /* View */,
 				C8CD4E8A20FF9B1200668C35 /* Controller */,
-				C8CD4E8B20FF9B1F00668C35 /* View */,
 			);
 			path = "活动";
 			sourceTree = "<group>";
@@ -1905,13 +1931,6 @@
 				C8CD4E9020FF9BCA00668C35 /* QNActivityViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C8CD4E8B20FF9B1F00668C35 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2040,8 +2059,10 @@
 				6F81509E20AAA03500DB1C30 /* QNIdCardViewController.xib in Resources */,
 				4B88FFF41ED92CD100135702 /* LaunchScreen.storyboard in Resources */,
 				6FD0F65F209E95EB00DFA2F1 /* express2.plist in Resources */,
+				6F34F584210051C800BEA167 /* QNActivityTableViewCell.xib in Resources */,
 				4B2B35B11F78DAF700425B0C /* Localizable.strings in Resources */,
 				4B112D431EE90F19000EDB83 /* Assets.xcassets in Resources */,
+				6F34F587210060A500BEA167 /* 背景8.png in Resources */,
 				6F4656E120A14FCF00241CB4 /* express0.plist in Resources */,
 				6F46574620A1836C00241CB4 /* QNEveryDayPicViewController.xib in Resources */,
 				6F4656F020A1667F00241CB4 /* resource.bundle in Resources */,
@@ -2338,6 +2359,7 @@
 				4B5B987E1EDEAF4B00EA014D /* EMPublishBigDayTableViewCell.m in Sources */,
 				6FD0F6A620A00DAF00DFA2F1 /* LEEAlert.m in Sources */,
 				6F8150F720AAA85500DB1C30 /* UIView+HXExtension.m in Sources */,
+				6F34F583210051C800BEA167 /* QNActivityTableViewCell.m in Sources */,
 				6F8C82F220AEB24800762F0B /* OFToast.m in Sources */,
 				4BDD8F031ED9C503008F52F2 /* EMSettingViewController.m in Sources */,
 				4BA30BDD1EDBCD21006376B0 /* EMDeviceUtil.m in Sources */,

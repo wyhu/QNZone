@@ -15,7 +15,7 @@
 #import "EMHomeViewController.h"//主页
 #import "EMSettingViewController.h"//设置
 #import "QNExpressTableViewController.h"//查快递
-
+#import "QNActivityViewController.h"//活动
 
 
 @interface AppDelegate ()
@@ -65,7 +65,7 @@
     QNRootNavigationController * expressNav = [[QNRootNavigationController alloc] initWithRootViewController:expressVC];
     [controllersArr addObject:expressNav];
     
-    UIViewController *actiVC = [[UIViewController alloc] init];
+    QNActivityViewController *actiVC = [[QNActivityViewController alloc] init];
     QNRootNavigationController * actiNav = [[QNRootNavigationController alloc] initWithRootViewController:actiVC];
     [controllersArr addObject:actiNav];
     
@@ -84,7 +84,7 @@
     config.selTitleColor = [EMTheme currentTheme].navBarBGColor;
     config.imageOffset = 2;
     config.titleFont = 12;
-    config.isClearTabBarTopLine = NO;
+    config.isClearTabBarTopLine = YES;
 //    config.tabBarTopLineColor = [UIColor colorWithHexString:@"#707070"];
     //标签栏
     JMTabBarController *tabBarVc = [[JMTabBarController alloc] initWithTabBarControllers:controllersArr NorImageArr:imageNormalArr SelImageArr:imageSelectedArr TitleArr:titleArr Config:config];

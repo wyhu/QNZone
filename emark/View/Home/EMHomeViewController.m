@@ -48,23 +48,21 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
     
     [self.view addSubview:self.collectionView];
     [self checkToClearNoti];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(0);
+        make.top.mas_equalTo(IS_IPHONEX?88:64);
         make.bottom.mas_equalTo(IS_IPHONEX?-49-37:-49);
     }];
-    self.collectionView.backgroundColor = [EMTheme currentTheme].navBarBGColor;
-    self.view.backgroundColor = [EMTheme currentTheme].navBarBGColor;
-    //    [self gooeyMenu];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self initNav];
+    
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
         [self.collectionView reloadData];
         [self.collectionView.mj_header endRefreshing];
         
@@ -140,10 +138,9 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        _collectionView.backgroundColor = [EMTheme currentTheme].navBarBGColor;
         [_collectionView registerClass:[EMHomeCollectionViewCell class]
             forCellWithReuseIdentifier:homeCollectionViewCellIdentifier];
-        
+        _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[UICollectionReusableView class]
             forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:homeCollectionResuableViewIdentifier];
@@ -157,7 +154,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 - (NSArray *)menuArr
 {
     if (!_menuArr) {
-        _menuArr = @[NSLocalizedString(@"日记", nil), NSLocalizedString(@"账单", nil), NSLocalizedString(@"节日", nil), NSLocalizedString(@"收纳", nil), NSLocalizedString(@"提醒", nil),NSLocalizedString(@"密码本", nil),NSLocalizedString(@"二维码", nil),NSLocalizedString(@"身份证拼接", nil),@"帮助",@"更多"];
+        _menuArr = @[NSLocalizedString(@"日记", nil), NSLocalizedString(@"账单", nil), NSLocalizedString(@"节日", nil), NSLocalizedString(@"收纳", nil), NSLocalizedString(@"提醒", nil),NSLocalizedString(@"密码本", nil),NSLocalizedString(@"二维码", nil),NSLocalizedString(@"身份证拼接", nil),@"更多"];
         
     }
     
@@ -197,14 +194,8 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
         //身份证拼接
         vc = [[QNIdCardViewController alloc] init];
     }else if (indexPath.row == 8){
-        //帮助
-        vc = [[EMHelpViewController alloc] init];
-    }else{
-        //更多
         vc = [[QNMoreToolTableViewController alloc] init];
-        
     }
-    
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -265,47 +256,17 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 {
     EMHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCollectionViewCellIdentifier
                                                                                forIndexPath:indexPath];
-    cell.backgroundColor = [self randomColor];
     cell.menuLabel.text = self.menuArr[indexPath.row];
+    
+    cell.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"背景%ld",indexPath.row]];
+    
     return cell;
 }
 
-- (UIColor *)randomColor{
-    
-    NSArray *colorArr = @[@"#FAF0E6",
-                          @"#FFE4E1",
-                          @"#FFF68F",
-                          @"#A52A2A",
-                          @"#FFA500",
-                          @"#836FFF",
-                          @"#7FFFD4",
-                          @"#EEC900",
-                          @"#EE6363",
-                          @"#6C7B8B",
-                          @"#90EE90",
-                          @"#B2DFEE"
-                          ];
-    
-    int index = arc4random() % colorArr.count;
-    
-    return UIColorFromRGBAString(colorArr[index]);
-}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
-        case 0: case 3: case 4: case 7:  case 8:
-            return CGSizeMake((self.view.frame.size.width - 50) / 2 + 50, 120);
-            break;
-        case 1: case 2: case 5: case 6: case 9:
-            return CGSizeMake((self.view.frame.size.width - 50) / 2 - 50, 120);
-            break;
-            
-        default:
-            break;
-    }
-    
-    return CGSizeZero;
+    return CGSizeMake((SCREEN_WIDTH - 30)/2, 100);
 }
 
 
@@ -322,20 +283,15 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 20, 0, 20);
+    return UIEdgeInsetsMake(0, 10, 0, 10);
 }
 
 
+//头部视图
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    CGFloat height = ([UIApplication sharedApplication].delegate.window.bounds.size.height - 120 * 3 - 10 * 2) / 2 - 64;
-    if (IS_3_5_INCH) {
-        height = ([UIApplication sharedApplication].delegate.window.bounds.size.height - 120 * 3 - 10 * 2) / 2;
-    }
-    
-    return CGSizeMake(self.view.frame.size.width, 50);
+    return CGSizeMake(SCREEN_WIDTH, 10);
 }
-
 
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -344,7 +300,7 @@ static NSString *homeCollectionResuableViewIdentifier = @"homeCollectionResuable
     UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                               withReuseIdentifier:homeCollectionResuableViewIdentifier
                                                                                      forIndexPath:indexPath];
-    headerView.backgroundColor = [EMTheme currentTheme].navBarBGColor;
+    headerView.backgroundColor = [UIColor whiteColor];
     
     return headerView;
 }
