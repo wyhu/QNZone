@@ -7,6 +7,7 @@
 //
 
 #import "EMSettingHeaderView.h"
+#import "UIImage+Additions.h"
 
 @interface EMSettingHeaderView()
 
@@ -69,7 +70,7 @@
         UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(lookBigImage)];
         [_headImageView addGestureRecognizer:gesture];
         _headImageView.backgroundColor = [UIColor whiteColor];
-        _headImageView.image = [UIImage imageNamed:@"headDefault"];
+        _headImageView.image = [UIImage appIcon];
     }
     
     return _headImageView;

@@ -58,33 +58,10 @@ static NSString *settingTableViewHeaderViewIdentifier = @"settingTableViewHeader
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"分享"] style:0 target:self action:@selector(shareClick)];
     
-    UIButton *dayPicBtn = [[UIButton alloc] init];
-    dayPicBtn.layer.cornerRadius = 45/2;
-    dayPicBtn.layer.masksToBounds = YES;
-    dayPicBtn.layer.borderWidth = 3.0;
-    dayPicBtn.layer.borderColor = [EMTheme currentTheme].navBarBGColor.CGColor;
-    [dayPicBtn setImage:[UIImage imageNamed:@"每日图片"] forState:0];
-    [self.view insertSubview:dayPicBtn aboveSubview:self.tableView];
-    [dayPicBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(-100);
-        make.right.mas_equalTo(-30);
-        make.size.mas_equalTo(CGSizeMake(45, 45));
-    }];
-    [dayPicBtn addTarget:self action:@selector(dayPicBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    
+
 }
 
 
-- (void)dayPicBtnClick{
-    
-    QNEveryDayPicViewController *vc = [[QNEveryDayPicViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
-    
-
-    
-    
-}
 
 - (void)shareClick{
     
@@ -148,11 +125,10 @@ static NSString *settingTableViewHeaderViewIdentifier = @"settingTableViewHeader
     return _tableView;
 }
 
-
 - (NSArray *)settingItemArr
 {
     if (!_settingItemArr) {
-        _settingItemArr = @[NSLocalizedString(@"更换头像", nil), NSLocalizedString(@"关于我们", nil), NSLocalizedString(@"支持一下", nil),@"您想要什么样的工具？告诉我",@"帮助"];
+        _settingItemArr = @[NSLocalizedString(@"关于", nil), NSLocalizedString(@"支持一下", nil),@"联系作者",@"帮助"];
     }
     
     return _settingItemArr;
@@ -203,7 +179,7 @@ static NSString *settingTableViewHeaderViewIdentifier = @"settingTableViewHeader
     } else if ([title isEqualToString:NSLocalizedString(@"支持一下", nil)]) {
         
         
-        NSString *url = @"https://itunes.apple.com/us/app/%E9%9D%92%E6%9F%A0book-%E8%AE%B0%E5%BD%95%E4%BB%8E%E6%AD%A4%E6%9B%B4%E4%BE%BF%E6%8D%B7/id1380559614?l=zh&ls=1&mt=8";
+        NSString *url = @"https://itunes.apple.com/cn/app/id1438381171";
         
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self URLEncodedString:url]]]) {
             
@@ -219,7 +195,7 @@ static NSString *settingTableViewHeaderViewIdentifier = @"settingTableViewHeader
         [self.navigationController pushViewController:vc animated:YES];
 
     }else{
-        NSString *url = @"https://itunes.apple.com/us/app/%E9%9D%92%E6%9F%A0book-%E8%AE%B0%E5%BD%95%E4%BB%8E%E6%AD%A4%E6%9B%B4%E4%BE%BF%E6%8D%B7/id1380559614?l=zh&ls=1&mt=8";
+        NSString *url = @"https://itunes.apple.com/cn/app/id1438381171";
         
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self URLEncodedString:url]]]) {
             

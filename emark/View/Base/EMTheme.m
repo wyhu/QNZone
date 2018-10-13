@@ -17,8 +17,8 @@
    
         _mainBGColor = [UIColor whiteColor];
         _navTintColor = [UIColor whiteColor];
-//        导航栏颜色#57F175
-        _navBarBGColor = UIColorFromRGB(87, 241, 117);
+
+        _navBarBGColor = UIColorFromRGB(55, 166, 231);
         _navTitleColor = [UIColor whiteColor];
         _navTitleFont = [UIFont boldSystemFontOfSize:18.0];
         _dividerColor = [UIColor whiteColor];

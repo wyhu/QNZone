@@ -18,4 +18,8 @@
 + (QNActivityTableViewCell *)cellForTableView:(UITableView *)tableView withIden:(NSString *)iden;
 
 
+
+
+
+
 @end

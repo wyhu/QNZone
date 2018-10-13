@@ -10,12 +10,16 @@
 #import "EMAlertManager.h"
 #import <UMCommon/UMCommon.h>
 #import <UMShare/UMShare.h>
-#import "JMTabBarController.h"
 #import "QNRootNavigationController.h"
-#import "EMHomeViewController.h"//主页
-#import "EMSettingViewController.h"//设置
+#import "QNNewHomeViewController.h"//主页
 #import "QNExpressTableViewController.h"//查快递
 #import "QNActivityViewController.h"//活动
+#import "EMPasswordViewController.h"//密码本
+#import "JMConfig.h"
+#import "JMTabBarController.h"
+#import "QNMoreToolTableViewController.h"
+#import "EMHomeViewController.h"
+
 
 
 @interface AppDelegate ()
@@ -51,9 +55,9 @@
 
 - (void)initRoots{
     //导航栏和标签栏使用第三方库，两者的全局配置都在这里完成
-    NSMutableArray *titleArr = [NSMutableArray arrayWithObjects:@"工具箱",@"查快递",@"活动",@"设置", nil];
-    NSMutableArray *imageSelectedArr = [NSMutableArray arrayWithObjects:@"工具箱",@"快递",@"活动",@"设置", nil];
-    NSMutableArray *imageNormalArr = [NSMutableArray arrayWithObjects:@"工具箱灰",@"快递灰",@"活动灰",@"设置灰", nil];
+    NSMutableArray *titleArr = [NSMutableArray arrayWithObjects:@"工具箱",@"设置", nil];
+    NSMutableArray *imageSelectedArr = [NSMutableArray arrayWithObjects:@"首页s",@"更多s", nil];
+    NSMutableArray *imageNormalArr = [NSMutableArray arrayWithObjects:@"首页n",@"更多n", nil];
     
     
     NSMutableArray *controllersArr = [NSMutableArray array];
@@ -62,33 +66,54 @@
     QNRootNavigationController * homeNav = [[QNRootNavigationController alloc] initWithRootViewController:homeVC];
     [controllersArr addObject:homeNav];
     
-    QNExpressTableViewController *expressVC = [[QNExpressTableViewController alloc] init];
-    QNRootNavigationController * expressNav = [[QNRootNavigationController alloc] initWithRootViewController:expressVC];
-    [controllersArr addObject:expressNav];
+//    QNExpressTableViewController *expressVC = [[QNExpressTableViewController alloc] init];
+//    QNRootNavigationController * expressNav = [[QNRootNavigationController alloc] initWithRootViewController:expressVC];
+//    [controllersArr addObject:expressNav];
     
-    QNActivityViewController *actiVC = [[QNActivityViewController alloc] init];
-    QNRootNavigationController * actiNav = [[QNRootNavigationController alloc] initWithRootViewController:actiVC];
-    [controllersArr addObject:actiNav];
+//    QNActivityViewController *actiVC = [[QNActivityViewController alloc] init];
+//    QNRootNavigationController * actiNav = [[QNRootNavigationController alloc] initWithRootViewController:actiVC];
+//    [controllersArr addObject:actiNav];
     
-    EMSettingViewController *settingVC = [[EMSettingViewController alloc] init];
+    QNMoreToolTableViewController *settingVC = [[QNMoreToolTableViewController alloc] init];
     QNRootNavigationController * settingNav = [[QNRootNavigationController alloc] initWithRootViewController:settingVC];
     [controllersArr addObject:settingNav];
-    
     
     //配置标签栏
     JMConfig *config = [JMConfig config];
     config.tabBarBackground = [EMTheme currentTheme].navTitleColor;
-    config.tabBarAnimType = JMConfigTabBarAnimTypeRotationY;
-    config.typeLayout = JMConfigTypeLayoutNormal;//只有图片
-    config.imageSize = CGSizeMake(26, 26);
+    config.typeLayout = JMConfigTypeLayoutImage;//只有图片
+    config.tabBarAnimType = JMConfigTabBarAnimTypeBoundsMax;
+    config.imageSize = CGSizeMake(27, 27);
     config.norTitleColor = [UIColor colorWithHexString:@"#707070"];
     config.selTitleColor = [EMTheme currentTheme].navBarBGColor;
     config.imageOffset = 2;
     config.titleFont = 12;
-    config.isClearTabBarTopLine = YES;
-//    config.tabBarTopLineColor = [UIColor colorWithHexString:@"#707070"];
+//    config.isClearTabBarTopLine = YES;
+    config.tabBarTopLineColor = [UIColor colorWithHexString:@"#707070"];
+    
     //标签栏
     JMTabBarController *tabBarVc = [[JMTabBarController alloc] initWithTabBarControllers:controllersArr NorImageArr:imageNormalArr SelImageArr:imageSelectedArr TitleArr:titleArr Config:config];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"添加"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"添加"] forState:UIControlStateHighlighted];
+    
+    [btn.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(46);
+    }];
+    
+    [config addCustomBtn:btn AtIndex:1 BtnClickBlock:^(UIButton *btn, NSInteger index) {
+       
+        NSInteger curIndex = JMConfig.config.tabBarController.selectedIndex;
+        
+        QNRootNavigationController *rootNav = JMConfig.config.tabBarController.viewControllers[curIndex];
+
+       EMPasswordViewController * vc = [[EMPasswordViewController alloc] init];
+        [rootNav pushViewController:vc animated:YES];
+        
+        
+    }];
+    
     
     self.window.rootViewController = tabBarVc;
     [self.window makeKeyAndVisible];
@@ -108,17 +133,13 @@
     [UMConfigure setEncryptEnabled:YES];//打开加密传输
     [UMConfigure setLogEnabled:YES];//设置打开日志
     
-    
-    
     /*
      * 打开图片水印
      */
     [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
     
-    
     /* 设置新浪的appKey和appSecret */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954"  appSecret:@"e55aee297d43be25bd3de2d6eb8e6347" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
-    
     
 }
 

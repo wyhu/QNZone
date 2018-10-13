@@ -33,11 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (@available(iOS 11.0, *)) {
-        self.navigationController.navigationBar.prefersLargeTitles = YES;
-    } else {
-        
-    }
+//    if (@available(iOS 11.0, *)) {
+//        self.navigationController.navigationBar.prefersLargeTitles = YES;
+//    } else {
+//        
+//    }
     
     self.title = NSLocalizedString(@"查快递", nil);
     self.view.backgroundColor = [EMTheme currentTheme].mainBGColor;

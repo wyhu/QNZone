@@ -12,4 +12,19 @@
 
 - (UIImage *)aspectResizeWithWidth:(CGFloat)width;
 
+/**
+ 动态获取启动图
+ 
+ @return 启动图
+ */
++ (UIImage *)launchImage;
+
+/**
+ 获取APPicon
+ 
+ @return 获取APPicon
+ */
++ (UIImage *)appIcon;
+
+
 @end

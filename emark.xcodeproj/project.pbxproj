@@ -120,6 +120,16 @@
 		4BED19671EE5237F008DCF41 /* EMPublishBillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED19651EE5237F008DCF41 /* EMPublishBillTableViewCell.m */; };
 		4BED19711EE52458008DCF41 /* EMBillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED196E1EE52458008DCF41 /* EMBillInfo.m */; };
 		4BED19721EE52458008DCF41 /* EMBillItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED19701EE52458008DCF41 /* EMBillItemInfo.m */; };
+		6F18BE1C216B19A8002EC178 /* QNMoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE1A216B19A8002EC178 /* QNMoreTableViewCell.m */; };
+		6F18BE1D216B19A8002EC178 /* QNMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BE1B216B19A8002EC178 /* QNMoreTableViewCell.xib */; };
+		6F18BE21216B2ABA002EC178 /* QNNewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE1F216B2ABA002EC178 /* QNNewHomeViewController.m */; };
+		6F18BE33216B2B88002EC178 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE27216B2B88002EC178 /* SDCycleScrollView.m */; };
+		6F18BE34216B2B88002EC178 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE28216B2B88002EC178 /* UIView+SDExtension.m */; };
+		6F18BE35216B2B88002EC178 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE29216B2B88002EC178 /* SDCollectionViewCell.m */; };
+		6F18BE36216B2B88002EC178 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE2C216B2B88002EC178 /* TADotView.m */; };
+		6F18BE37216B2B88002EC178 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE2D216B2B88002EC178 /* TAPageControl.m */; };
+		6F18BE38216B2B88002EC178 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE2E216B2B88002EC178 /* TAAnimatedDotView.m */; };
+		6F18BE39216B2B88002EC178 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18BE2F216B2B88002EC178 /* TAAbstractDotView.m */; };
 		6F34F583210051C800BEA167 /* QNActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */; };
 		6F34F584210051C800BEA167 /* QNActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */; };
 		6F34F587210060A500BEA167 /* 背景8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F34F586210060A500BEA167 /* 背景8.png */; };
@@ -152,8 +162,8 @@
 		6F46574020A17C5200241CB4 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F46572920A17C5200241CB4 /* UIView+WebCache.m */; };
 		6F46574120A17C5200241CB4 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F46572D20A17C5200241CB4 /* UIButton+WebCache.m */; };
 		6F46574520A1836C00241CB4 /* QNEveryDayPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F46574320A1836C00241CB4 /* QNEveryDayPicViewController.m */; };
-		6F46574620A1836C00241CB4 /* QNEveryDayPicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F46574420A1836C00241CB4 /* QNEveryDayPicViewController.xib */; };
 		6F64FAAF209C0963004BB97D /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F64FAAE209C0962004BB97D /* Default-568.png */; };
+		6F67DDC9216C5E8500808732 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F67DDC7216C5E8400808732 /* UIButton+EnlargeEdge.m */; };
 		6F81503920AA9EEB00DB1C30 /* QNMoreToolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F81503820AA9EEB00DB1C30 /* QNMoreToolTableViewController.m */; };
 		6F81509D20AAA03500DB1C30 /* QNIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F81509B20AAA03500DB1C30 /* QNIdCardViewController.m */; };
 		6F81509E20AAA03500DB1C30 /* QNIdCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F81509C20AAA03500DB1C30 /* QNIdCardViewController.xib */; };
@@ -496,6 +506,25 @@
 		4BED196E1EE52458008DCF41 /* EMBillInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBillInfo.m; sourceTree = "<group>"; };
 		4BED196F1EE52458008DCF41 /* EMBillItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBillItemInfo.h; sourceTree = "<group>"; };
 		4BED19701EE52458008DCF41 /* EMBillItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBillItemInfo.m; sourceTree = "<group>"; };
+		6F18BE19216B19A8002EC178 /* QNMoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNMoreTableViewCell.h; sourceTree = "<group>"; };
+		6F18BE1A216B19A8002EC178 /* QNMoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNMoreTableViewCell.m; sourceTree = "<group>"; };
+		6F18BE1B216B19A8002EC178 /* QNMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNMoreTableViewCell.xib; sourceTree = "<group>"; };
+		6F18BE1E216B2ABA002EC178 /* QNNewHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNNewHomeViewController.h; sourceTree = "<group>"; };
+		6F18BE1F216B2ABA002EC178 /* QNNewHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNNewHomeViewController.m; sourceTree = "<group>"; };
+		6F18BE24216B2B88002EC178 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		6F18BE25216B2B88002EC178 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		6F18BE26216B2B88002EC178 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		6F18BE27216B2B88002EC178 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		6F18BE28216B2B88002EC178 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		6F18BE29216B2B88002EC178 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		6F18BE2B216B2B88002EC178 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		6F18BE2C216B2B88002EC178 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		6F18BE2D216B2B88002EC178 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		6F18BE2E216B2B88002EC178 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		6F18BE2F216B2B88002EC178 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		6F18BE30216B2B88002EC178 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		6F18BE31216B2B88002EC178 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		6F18BE32216B2B88002EC178 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
 		6F34F580210051C800BEA167 /* QNActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNActivityTableViewCell.h; sourceTree = "<group>"; };
 		6F34F581210051C800BEA167 /* QNActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNActivityTableViewCell.m; sourceTree = "<group>"; };
 		6F34F582210051C800BEA167 /* QNActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -557,10 +586,11 @@
 		6F46572E20A17C5200241CB4 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		6F46574220A1836C00241CB4 /* QNEveryDayPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNEveryDayPicViewController.h; sourceTree = "<group>"; };
 		6F46574320A1836C00241CB4 /* QNEveryDayPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNEveryDayPicViewController.m; sourceTree = "<group>"; };
-		6F46574420A1836C00241CB4 /* QNEveryDayPicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QNEveryDayPicViewController.xib; sourceTree = "<group>"; };
 		6F4F5F1C20B2A5A1000DD8C3 /* emark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emark-Bridging-Header.h"; sourceTree = "<group>"; };
 		6F4F5F2120B2B982000DD8C3 /* emark-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emark-Swift.h"; sourceTree = "<group>"; };
 		6F64FAAE209C0962004BB97D /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
+		6F67DDC7216C5E8400808732 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
+		6F67DDC8216C5E8400808732 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
 		6F81503720AA9EEB00DB1C30 /* QNMoreToolTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNMoreToolTableViewController.h; sourceTree = "<group>"; };
 		6F81503820AA9EEB00DB1C30 /* QNMoreToolTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNMoreToolTableViewController.m; sourceTree = "<group>"; };
 		6F81509A20AAA03500DB1C30 /* QNIdCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNIdCardViewController.h; sourceTree = "<group>"; };
@@ -819,7 +849,6 @@
 		4B5602F81ED9340F004025BB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6F81503620AA9EC100DB1C30 /* More */,
 				6F4656F120A166B000241CB4 /* Scan */,
 				6FD0F6E720A013EA00DFA2F1 /* Root */,
 				6F8F4073209D94BF0033ED82 /* Express */,
@@ -832,7 +861,6 @@
 				4BDD8F001ED9C4A2008F52F2 /* Setting */,
 				6FF0EA9020975EC90007EB25 /* Help */,
 				6FF0EA942097656C0007EB25 /* Password */,
-				4B5602FE1ED9340F004025BB /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -873,6 +901,10 @@
 				4B5603021ED9340F004025BB /* EMHomeViewController.m */,
 				4B9F266B1EED3001004B2230 /* EMSplashViewController.h */,
 				4B9F266C1EED3001004B2230 /* EMSplashViewController.m */,
+				6F18BE1E216B2ABA002EC178 /* QNNewHomeViewController.h */,
+				6F18BE1F216B2ABA002EC178 /* QNNewHomeViewController.m */,
+				6F67DDC8216C5E8400808732 /* UIButton+EnlargeEdge.h */,
+				6F67DDC7216C5E8400808732 /* UIButton+EnlargeEdge.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1352,7 +1384,6 @@
 				4BA30BD91EDBCABF006376B0 /* EMAboutUsViewController.m */,
 				6F46574220A1836C00241CB4 /* QNEveryDayPicViewController.h */,
 				6F46574320A1836C00241CB4 /* QNEveryDayPicViewController.m */,
-				6F46574420A1836C00241CB4 /* QNEveryDayPicViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1435,6 +1466,35 @@
 				4BC9B8B91EE5A49800853D62 /* EMBillManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		6F18BE23216B2B88002EC178 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6F18BE24216B2B88002EC178 /* UIView+SDExtension.h */,
+				6F18BE25216B2B88002EC178 /* SDCycleScrollView.h */,
+				6F18BE26216B2B88002EC178 /* SDCollectionViewCell.h */,
+				6F18BE27216B2B88002EC178 /* SDCycleScrollView.m */,
+				6F18BE28216B2B88002EC178 /* UIView+SDExtension.m */,
+				6F18BE29216B2B88002EC178 /* SDCollectionViewCell.m */,
+				6F18BE2A216B2B88002EC178 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		6F18BE2A216B2B88002EC178 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				6F18BE2B216B2B88002EC178 /* TAAbstractDotView.h */,
+				6F18BE2C216B2B88002EC178 /* TADotView.m */,
+				6F18BE2D216B2B88002EC178 /* TAPageControl.m */,
+				6F18BE2E216B2B88002EC178 /* TAAnimatedDotView.m */,
+				6F18BE2F216B2B88002EC178 /* TAAbstractDotView.m */,
+				6F18BE30216B2B88002EC178 /* TADotView.h */,
+				6F18BE31216B2B88002EC178 /* TAAnimatedDotView.h */,
+				6F18BE32216B2B88002EC178 /* TAPageControl.h */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		6F34F57F210036F300BEA167 /* View */ = {
@@ -1531,6 +1591,9 @@
 			children = (
 				6F81503720AA9EEB00DB1C30 /* QNMoreToolTableViewController.h */,
 				6F81503820AA9EEB00DB1C30 /* QNMoreToolTableViewController.m */,
+				6F18BE19216B19A8002EC178 /* QNMoreTableViewCell.h */,
+				6F18BE1A216B19A8002EC178 /* QNMoreTableViewCell.m */,
+				6F18BE1B216B19A8002EC178 /* QNMoreTableViewCell.xib */,
 				6F81509A20AAA03500DB1C30 /* QNIdCardViewController.h */,
 				6F81509B20AAA03500DB1C30 /* QNIdCardViewController.m */,
 				6F81509C20AAA03500DB1C30 /* QNIdCardViewController.xib */,
@@ -1670,6 +1733,7 @@
 		6FD0F66620A00D9A00DFA2F1 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				6F18BE23216B2B88002EC178 /* SDCycleScrollView */,
 				6F8C82ED20AEB24800762F0B /* OFToast */,
 				6F8C82E920AEB19500762F0B /* MB */,
 				6F8C82E520AEA55000762F0B /* HexColor */,
@@ -1909,6 +1973,8 @@
 		C8CD4E8820FF9AD500668C35 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6F81503620AA9EC100DB1C30 /* More */,
+				4B5602FE1ED9340F004025BB /* Home */,
 				C8CD4E8920FF9B0600668C35 /* 活动 */,
 			);
 			path = Classes;
@@ -2064,9 +2130,9 @@
 				4B112D431EE90F19000EDB83 /* Assets.xcassets in Resources */,
 				6F34F587210060A500BEA167 /* 背景8.png in Resources */,
 				6F4656E120A14FCF00241CB4 /* express0.plist in Resources */,
-				6F46574620A1836C00241CB4 /* QNEveryDayPicViewController.xib in Resources */,
 				6F4656F020A1667F00241CB4 /* resource.bundle in Resources */,
 				4B88FFEF1ED92CD100135702 /* Main.storyboard in Resources */,
+				6F18BE1D216B19A8002EC178 /* QNMoreTableViewCell.xib in Resources */,
 				6FD0F6E220A00E3200DFA2F1 /* EasyNavButton.bundle in Resources */,
 				6F81510220AAA85500DB1C30 /* HXWeiboPhotoPicker.bundle in Resources */,
 			);
@@ -2182,6 +2248,7 @@
 				6F8150F620AAA85500DB1C30 /* HXAlbumListViewController.m in Sources */,
 				4BC9B8C01EE5B2FA00853D62 /* EMBillHeaderView.m in Sources */,
 				4B4B9BD11EEC13EF005645DA /* GKImageCropViewController.m in Sources */,
+				6F18BE38216B2B88002EC178 /* TAAnimatedDotView.m in Sources */,
 				4B9F29B11EDE595000577D4B /* EMDiaryShowViewController.m in Sources */,
 				6FD0F6B220A00DAF00DFA2F1 /* JMBaseButton+CountDown.m in Sources */,
 				4BA30BF81EDC502B006376B0 /* EMDiaryCacheProvider.m in Sources */,
@@ -2233,6 +2300,7 @@
 				6F81510620AAA85500DB1C30 /* HXCustomNavigationController.m in Sources */,
 				4B761F621EED74F7006A00C6 /* EMMaskView.m in Sources */,
 				4B56ACDE1EE1235F00C1AFAB /* EMTextField.m in Sources */,
+				6F18BE21216B2ABA002EC178 /* QNNewHomeViewController.m in Sources */,
 				6FD0F662209F001600DFA2F1 /* QNExpressCompanyTableViewController.m in Sources */,
 				6F8150F920AAA85500DB1C30 /* HXPhotoTools.m in Sources */,
 				C8CD4E8E20FF9B8C00668C35 /* QNBaseViewController.m in Sources */,
@@ -2319,6 +2387,7 @@
 				4BBD995B1ED935EC002AA8FB /* EMHomeCollectionViewCell.m in Sources */,
 				4B5B98811EDFB18200EA014D /* EMPublishBigDayEditTableViewCell.m in Sources */,
 				4B62380A1EE2720D00E723E3 /* EMPublishAlertTableViewCell.m in Sources */,
+				6F18BE39216B2B88002EC178 /* TAAbstractDotView.m in Sources */,
 				4BBD99801ED95B2A002AA8FB /* EMHomeHeadInfo.m in Sources */,
 				4B9F29B71EDE5E0D00577D4B /* EMDiaryShowHeaderView.m in Sources */,
 				6FD0F6A820A00DAF00DFA2F1 /* JMBootstrapButtonConfig.m in Sources */,
@@ -2344,15 +2413,19 @@
 				4BBD998F1ED97C38002AA8FB /* EMHomeCacheProvider.m in Sources */,
 				6F8150FB20AAA85500DB1C30 /* HXDatePhotoViewFlowLayout.m in Sources */,
 				6FD0F6DC20A00E3200DFA2F1 /* EasyKVOInfo.m in Sources */,
+				6F18BE36216B2B88002EC178 /* TADotView.m in Sources */,
 				6F8150FE20AAA85500DB1C30 /* HXDatePhotoViewPresentTransition.m in Sources */,
+				6F67DDC9216C5E8500808732 /* UIButton+EnlargeEdge.m in Sources */,
 				6F81510C20AAA85500DB1C30 /* HXCircleProgressView.m in Sources */,
 				6FD0F6AB20A00DAF00DFA2F1 /* JMBaseButtonConfig.m in Sources */,
+				6F18BE33216B2B88002EC178 /* SDCycleScrollView.m in Sources */,
 				4B56ACD81EE10F4A00C1AFAB /* EMPlaceViewController.m in Sources */,
 				4B0E30051EDAFEA1006438F7 /* UIView+EMTips.m in Sources */,
 				6F46573F20A17C5200241CB4 /* UIView+WebCacheOperation.m in Sources */,
 				4BED19611EE520B9008DCF41 /* EMPublishBillViewController.m in Sources */,
 				4B83DDCA1EDA8C320053B829 /* EMSettingActionSheet.m in Sources */,
 				6F46573320A17C5200241CB4 /* UIImageView+HighlightedWebCache.m in Sources */,
+				6F18BE35216B2B88002EC178 /* SDCollectionViewCell.m in Sources */,
 				6FD0F6E120A00E3200DFA2F1 /* EasyNavigationView+RightButton.m in Sources */,
 				4BC9B8B11EE5824300853D62 /* EMBillTypeInfo.m in Sources */,
 				4BED19721EE52458008DCF41 /* EMBillItemInfo.m in Sources */,
@@ -2363,13 +2436,16 @@
 				6F8C82F220AEB24800762F0B /* OFToast.m in Sources */,
 				4BDD8F031ED9C503008F52F2 /* EMSettingViewController.m in Sources */,
 				4BA30BDD1EDBCD21006376B0 /* EMDeviceUtil.m in Sources */,
+				6F18BE34216B2B88002EC178 /* UIView+SDExtension.m in Sources */,
 				6F46573620A17C5200241CB4 /* UIImage+MultiFormat.m in Sources */,
+				6F18BE37216B2B88002EC178 /* TAPageControl.m in Sources */,
 				6FD0F6B320A00DAF00DFA2F1 /* JMBadgeValue.m in Sources */,
 				4B56ACCE1EE026AF00C1AFAB /* EMBigDayManager.m in Sources */,
 				6F8150EF20AAA85500DB1C30 /* HXPhoto3DTouchViewController.m in Sources */,
 				6FD0F6D920A00E3200DFA2F1 /* EasyNavigationController.m in Sources */,
 				4B9F26671EECF406004B2230 /* EMShowPhotoTool.m in Sources */,
 				6FD0F6B120A00DAF00DFA2F1 /* JMRuntime.m in Sources */,
+				6F18BE1C216B19A8002EC178 /* QNMoreTableViewCell.m in Sources */,
 				6F81503920AA9EEB00DB1C30 /* QNMoreToolTableViewController.m in Sources */,
 				6F81510120AAA85500DB1C30 /* HXCustomCollectionReusableView.m in Sources */,
 				6FD0F6AC20A00DAF00DFA2F1 /* JMWaveButton.m in Sources */,
@@ -2548,7 +2624,7 @@
 				INFOPLIST_FILE = emark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hwy.qnbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hunter.smarttool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "emark/emark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2571,7 +2647,7 @@
 				INFOPLIST_FILE = emark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hwy.qnbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hunter.smarttool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "emark/emark-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

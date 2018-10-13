@@ -31,11 +31,13 @@
             make.centerY.equalTo(weakSelf.contentView);
         }];
         
+        self.picImageView.hidden = YES;
+        
         [self.contentView addSubview:self.itemLabel];
         [self.itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.width.mas_equalTo(100);
             make.height.mas_equalTo(20);
-            make.left.equalTo(weakSelf.contentView).with.offset(50);
+            make.left.equalTo(weakSelf.picImageView);
             make.centerY.equalTo(weakSelf.contentView);
         }];
         
